@@ -1,0 +1,23 @@
+:root {
+  /* Futuristic graphite color palette */
+  --background: #1c1c1e;
+  --surface: #2c2c2e;
+  --surface-hover: #3c3c3e;
+  --primary: #ffffff;
+  --secondary: #98989d;
+  --accent: #0a84ff;
+  --border: #3c3c3e;
+  --slider-bg: #48484a;
+  
+  /* Typography */
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: var(--background);
+  color: var(--primary);
+  margin: 0;
+  padding: 0;
+}
