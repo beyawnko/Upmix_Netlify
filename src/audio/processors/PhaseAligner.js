@@ -28,8 +28,8 @@ export class PhaseAligner {
     // Cross-correlation for phase alignment
     const crossCorrelation = new Float32Array(signal.length);
     for (let i = 0; i < signal.length; i++) {
-      for (let j = 0; j < reference.length; j++) {
-        crossCorrelation[i] += signal[j] * reference[(j + i) % reference.length];
+      for (let j = 0; j < reference.getChannelData(0).length; j++) {
+        crossCorrelation[i] += signal[j] * reference.getChannelData(0)[(j + i) % reference.getChannelData(0).length];
       }
     }
     return new Tone.Buffer().fromArray(crossCorrelation);
