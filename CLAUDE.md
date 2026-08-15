@@ -31,10 +31,11 @@ dashboard. Don't assume a build hook exists in-tree.
 | Linter / formatter | **None** |
 | CI | **None** (no `.github/`) |
 | TypeScript | **Not used** — plain `.js` only |
+| Deploy config | **None in-tree** (no `netlify.toml`) |
 
-There is also **no `.gitignore`**. After `npm install` or a build, `node_modules/`
-and `dist/` show up as untracked. Always stage files explicitly (`git add
-CLAUDE.md src/...`); never `git add -A` or `git add .` in this repo.
+`.gitignore` covers `node_modules/`, `dist/`, logs, editor noise, and `.env*`.
+Neither dependencies nor build output are committed — run `npm install` after
+cloning.
 
 ## Commands
 
